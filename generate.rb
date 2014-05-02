@@ -59,11 +59,11 @@ module Formatter
       'title' => 'kB/sec (higher is better)',
       'types' => [ 'outblk', 'outrw', 'inblk' ],
     },
-    # 'metadata' => {
-    #   'name' => 'File metadata',
-    #   'title' => 'files/sec (higher is better)',
-    #   'types' => [ 'sc', 'sd', 'rc', 'rd' ],
-    # },
+    'metadata' => {
+      'name' => 'File metadata',
+      'title' => 'files/sec (higher is better)',
+      'types' => [ 'sc', 'sd', 'rc', 'rd' ],
+    },
     # 'metadata-read' => {
     #   'name' => 'File metadata (read)',
     #   'title' => 'files/sec (higher is better)',
@@ -74,26 +74,26 @@ module Formatter
       'title' => 'CPU usage in % (lower is better)',
       'types' => [ 'outblkcpu', 'outrwcpu', 'inblkcpu', 'seekcpu' ],
     },
-    # 'metadata-cpu' => {
-    #   'name' => 'Seq and Random CPU',
-    #   'title' => 'CPU usage in % (lower is better)',
-    #   'types' => [ 'sccpu', 'srcpu', 'sdcpu', 'rccpu', 'rrcpu', 'rdcpu' ],
-    # },
+    'metadata-cpu' => {
+      'name' => 'Seq and Random CPU',
+      'title' => 'CPU usage in % (lower is better)',
+      'types' => [ 'sccpu', 'srcpu', 'sdcpu', 'rccpu', 'rrcpu', 'rdcpu' ],
+    },
     'blockio-latency' => {
       'name' => 'Block IO Latency',
       'title' => 'milliseconds (lower is better)',
       'types' => [ 'latoutblk', 'latoutrw', 'latinblk' ],
     },
-    # 'metadata-latency' => {
-    #   'name' => 'File metadata Latency',
-    #   'title' => 'milliseconds (lower is better)',
-    #   'types' => [ 'latsc', 'latsd', 'latrc', 'latrd' ],
-    # },
-    # 'metadata-read-latency' => {
-    #   'name' => 'File metadata (read) Latency',
-    #   'title' => 'milliseconds (lower is better)',
-    #   'types' => [ 'latsr', 'latrr' ],
-    # },
+    'metadata-latency' => {
+      'name' => 'File metadata Latency',
+      'title' => 'milliseconds (lower is better)',
+      'types' => [ 'latsc', 'latsd', 'latrc', 'latrd' ],
+    },
+    'metadata-read-latency' => {
+      'name' => 'File metadata (read) Latency',
+      'title' => 'milliseconds (lower is better)',
+      'types' => [ 'latsr', 'latrr' ],
+    },
   }
 
   LABELS = {
