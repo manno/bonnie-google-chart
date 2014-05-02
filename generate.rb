@@ -40,11 +40,11 @@ module Parser
   def self.norm_time(match)
     case match[2]
     when /ms/
-      "#{match[1]}"
+      "#{match[1].to_i * 1000 * 1000}"
     when /us/
-      "#{match[1].to_i / 1000}"
+      "#{match[1].to_i * 1000}"
     when /ns/
-      "#{match[1].to_i / 1000000}"
+      "#{match[1].to_i}"
     end
   end
 
@@ -81,17 +81,17 @@ module Formatter
     },
     'blockio-latency' => {
       'name' => 'Block IO Latency',
-      'title' => 'milliseconds (lower is better)',
+      'title' => 'nanoseconds (lower is better)',
       'types' => [ 'latoutblk', 'latoutrw', 'latinblk' ],
     },
     'metadata-latency' => {
       'name' => 'File metadata Latency',
-      'title' => 'milliseconds (lower is better)',
+      'title' => 'nanoseconds (lower is better)',
       'types' => [ 'latsc', 'latsd', 'latrc', 'latrd' ],
     },
     'metadata-read-latency' => {
       'name' => 'File metadata (read) Latency',
-      'title' => 'milliseconds (lower is better)',
+      'title' => 'nanoseconds (lower is better)',
       'types' => [ 'latsr', 'latrr' ],
     },
   }
